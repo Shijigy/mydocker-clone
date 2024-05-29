@@ -1,0 +1,4 @@
+第一天
+Docker run
+go build .
+sudo ./mydocker run -it /bin/sh

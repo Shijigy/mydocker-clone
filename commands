@@ -2,3 +2,7 @@
 Docker run
 go build .
 sudo ./mydocker run -it /bin/sh
+第二天
+go build .
+sudo ./mydocker run -it /bin/sh
+第三天

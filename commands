@@ -6,3 +6,6 @@ sudo ./mydocker run -it /bin/sh
 go build .
 sudo ./mydocker run -it /bin/sh
 第三天
+vi ~/mem-allocate.c
+gcc ~/mem-allocate.c -o ~/mem-allocate
+sudo ./mydocker run -it -mem 10m /bin/sh

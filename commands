@@ -9,3 +9,10 @@ sudo ./mydocker run -it /bin/sh
 vi ~/mem-allocate.c
 gcc ~/mem-allocate.c -o ~/mem-allocate
 sudo ./mydocker run -it -mem 10m /bin/sh
+第四添
+containerId=$(sudo docker ps --filter "ancestor=busybox:latest"|grep -v IMAGE|awk '{print $1}')
+echo "containerId" $containerId
+sudo docker export -o busybox.tar $containerId
+mkdir busybox
+udo tar -xvf busybox.tar -C busybox/
+.dockerenv

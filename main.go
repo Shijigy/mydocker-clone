@@ -34,31 +34,3 @@ func main() {
 		log.Fatal(err)
 	}
 }
-
-//func main() {
-//	app := cli.NewApp()
-//	app.Name = "ls"
-//	app.Usage = "List directory contents"
-//	app.Action = func(c *cli.Context) error {
-//		dir, err := os.Open(".") // 默认打开当前目录
-//		if err != nil {
-//			return err
-//		}
-//		defer dir.Close()
-//
-//		fileInfos, err := dir.Readdir(-1) // 列出所有文件
-//		if err != nil {
-//			return err
-//		}
-//
-//		for _, fi := range fileInfos {
-//			fmt.Println(fi.Name())
-//		}
-//		return nil
-//	}
-//
-//	err := app.Run(os.Args)
-//	if err != nil {
-//		fmt.Println(err)
-//	}
-//}

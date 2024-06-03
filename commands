@@ -16,3 +16,5 @@ sudo docker export -o busybox.tar $containerId
 mkdir busybox
 udo tar -xvf busybox.tar -C busybox/
 .dockerenv
+sudo mv ~/busybox /root/
+ sudo ./mydocker run -it  /bin/ls

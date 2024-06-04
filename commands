@@ -18,3 +18,22 @@ udo tar -xvf busybox.tar -C busybox/
 .dockerenv
 sudo mv ~/busybox /root/
  sudo ./mydocker run -it  /bin/ls
+第五条
+sudo mv busybox.tar /root
+/mydocker run -it /bin/sh
+/ # echo KubeExplorer > tmp/hello.txt
+/ # ls /tmp
+hello.txt
+/ # cat /tmp/hello.txt
+KubeExplorer
+ ls /root
+ ls busybox/tmp
+ root@mydocker:~# ls upper/tmp
+ hello.txt
+ root@mydocker:~# ls merged/tmp
+ hello.txt
+ / # exit
+ root@mydocker:~# ls /root
+ busybox  busybox.tar
+ root@mydocker:~# ls /root/busybox
+ bin  dev  etc  home  proc  root  sys  tmp  usr  var

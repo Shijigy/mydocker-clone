@@ -37,3 +37,4 @@ KubeExplorer
  busybox  busybox.tar
  root@mydocker:~# ls /root/busybox
  bin  dev  etc  home  proc  root  sys  tmp  usr  var
+ 第六天

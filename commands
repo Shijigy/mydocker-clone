@@ -38,3 +38,10 @@ KubeExplorer
  root@mydocker:~# ls /root/busybox
  bin  dev  etc  home  proc  root  sys  tmp  usr  var
  第六天
+ ./mydocker run -it -v /root/volume:/tmp /bin/sh
+/ # echo KubeExplorer > tmp/hello.txt
+/ # ls /tmp
+hello.txt
+/ # cat /tmp/hello.txt
+KubeExplorer
+/ # exit

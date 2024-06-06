@@ -45,3 +45,9 @@ hello.txt
 / # cat /tmp/hello.txt
 KubeExplorer
 / # exit
+//第七天
+./mydocker run -it /bin/sh
+/ # echo KubeExplorer > tmp/hello.txt
+/ # cat /tmp/hello.txt
+ ./mydocker commit myimage
+ sudo ./mydocker commit myimage

@@ -51,3 +51,7 @@ KubeExplorer
 / # cat /tmp/hello.txt
  ./mydocker commit myimage
  sudo ./mydocker commit myimage
+//第八条
+go build .
+./mydocker run -d top
+ps -ef|grep -e PPID -e top

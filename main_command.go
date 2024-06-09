@@ -33,6 +33,10 @@ var runCommand = cli.Command{
 			Name:  "v",
 			Usage: "volume,e.g.: -v /ect/conf:/etc/conf",
 		},
+		cli.BoolFlag{
+			Name:  "d",
+			Usage: "detach container,run background",
+		},
 	},
 	/*
 		这里是run命令执行的真正函数。
@@ -51,6 +55,15 @@ var runCommand = cli.Command{
 		}
 
 		tty := context.Bool("it")
+		detach := context.Bool("d")
+
+		if tty && detach {
+			return fmt.Errorf("it and d flag can not both provided")
+		}
+		if !detach { // 如果不是指定后台运行，就默认前台运行
+			tty = true
+		}
+		log.Infof("createTty %v", tty)
 		resConf := &subsystems.ResourceConfig{
 			MemoryLimit: context.String("mem"),
 			CpuSet:      context.String("cpuset"),

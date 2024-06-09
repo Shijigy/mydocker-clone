@@ -55,3 +55,9 @@ KubeExplorer
 go build .
 ./mydocker run -d top
 ps -ef|grep -e PPID -e top
+//第九条
+./mydocker run -d -name runtop top
+ ps -ef|grep -e PPID -e top
+ ls /var/lib/mydocker/containers
+ cat /var/lib/mydocker/containers/0690341686/config.json
+ ./mydocker ps

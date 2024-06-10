@@ -61,3 +61,7 @@ ps -ef|grep -e PPID -e top
  ls /var/lib/mydocker/containers
  cat /var/lib/mydocker/containers/0690341686/config.json
  ./mydocker ps
+//第十条
+./mydocker run -d -name mytop top
+./mydocker ps
+./mydocker logs 0439540405

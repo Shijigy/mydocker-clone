@@ -65,3 +65,6 @@ ps -ef|grep -e PPID -e top
 ./mydocker run -d -name mytop top
 ./mydocker ps
 ./mydocker logs 0439540405
+//第11天
+./mydocker exec 9365032797 sh
+./mydocker exec 9365032797 sh

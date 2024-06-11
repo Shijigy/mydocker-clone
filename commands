@@ -72,3 +72,9 @@ ps -ef|grep -e PPID -e top
 ./mydocker run -d -name bird top
  ./mydocker ps
 ./mydocker ps
+//第十三条
+./mydocker run -d -name rm1 top
+ ./mydocker ps
+./mydocker stop  7984533724
+ ./mydocker rm 7984533724
+ ./mydocker ps

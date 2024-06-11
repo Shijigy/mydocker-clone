@@ -68,3 +68,7 @@ ps -ef|grep -e PPID -e top
 //第11天
 ./mydocker exec 9365032797 sh
 ./mydocker exec 9365032797 sh
+//第十二条
+./mydocker run -d -name bird top
+ ./mydocker ps
+./mydocker ps

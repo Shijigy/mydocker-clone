@@ -78,3 +78,10 @@ ps -ef|grep -e PPID -e top
 ./mydocker stop  7984533724
  ./mydocker rm 7984533724
  ./mydocker ps
+//第十四条
+mv busybox.tar /var/lib/mydocker/image/
+./mydocker run -d -name rootfs busybox top
+./mydocker ps
+./mydocker exec 3393020957 /bin/sh
+/ # echo KubeExplorer > a.txt
+/ # cat a.txt

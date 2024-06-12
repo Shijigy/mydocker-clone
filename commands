@@ -90,3 +90,7 @@ mv busybox.tar /var/lib/mydocker/image/
 ./mydocker exec 0245441377  /bin/sh
 / # cat a.txt
 ./mydocker rm 3393020957  -f
+//第十五天
+./mydocker run -it -name c1 -e user=17x -e name=mydocker busybox sh
+./mydocker run -d -name c2 -e user=17x -e name=mydocker busybox top
+ env|grep user

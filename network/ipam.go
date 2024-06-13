@@ -18,7 +18,7 @@ type IPAM struct {
 	Subnets             *map[string]string // 网段和位图算法的数组 map, key 是网段， value 是分配的位图数组
 }
 
-// 初始化一个IPAM的对象，默认使用/var/lib/mydocker/network/ipam/subnet.json作为分配信息存储位置
+// 初始化一个IPAM的对象，默认使用/var/run/mydocker/network/ipam/subnet.json作为分配信息存储位置
 var ipAllocator = &IPAM{
 	SubnetAllocatorPath: ipamDefaultAllocatorPath,
 }

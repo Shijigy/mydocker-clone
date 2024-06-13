@@ -94,3 +94,8 @@ mv busybox.tar /var/lib/mydocker/image/
 ./mydocker run -it -name c1 -e user=17x -e name=mydocker busybox sh
 ./mydocker run -d -name c2 -e user=17x -e name=mydocker busybox top
  env|grep user
+ //第十六条
+ go test -v -run TestAllocate
+ cat /var/lib/mydocker/network/ipam/subnet.json
+ go test -v -run TestRelease
+ cat /var/lib/mydocker/network/ipam/subnet.json

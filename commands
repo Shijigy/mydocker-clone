@@ -101,3 +101,7 @@ mv busybox.tar /var/lib/mydocker/image/
  cat /var/lib/mydocker/network/ipam/subnet.json
 go test -v -run TestBridgeCreate
  go test -v -run TestBridgeDelete
+ //第十七条
+./mydocker run -it -net testbridge busybox sh
+ ip a
+ping 10.0.0.2 -c 4

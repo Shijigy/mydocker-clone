@@ -99,3 +99,5 @@ mv busybox.tar /var/lib/mydocker/image/
  cat /var/lib/mydocker/network/ipam/subnet.json
  go test -v -run TestRelease
  cat /var/lib/mydocker/network/ipam/subnet.json
+go test -v -run TestBridgeCreate
+ go test -v -run TestBridgeDelete

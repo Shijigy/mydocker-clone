@@ -4,7 +4,7 @@ import (
 	"fmt"
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
-	"mydocker/cgroups/subsystems"
+	"mydocker/cgroups/resource"
 	"mydocker/container"
 	"mydocker/network"
 	"os"
@@ -88,7 +88,7 @@ var runCommand = cli.Command{
 			tty = true
 		}
 		log.Infof("createTty %v", tty)
-		resConf := &subsystems.ResourceConfig{
+		resConf := &resource.ResourceConfig{
 			MemoryLimit: context.String("mem"),
 			CpuSet:      context.String("cpuset"),
 			CpuCfsQuota: context.Int("cpu"),

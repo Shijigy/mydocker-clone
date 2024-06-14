@@ -105,3 +105,16 @@ go test -v -run TestBridgeCreate
 ./mydocker run -it -net testbridge busybox sh
  ip a
 ping 10.0.0.2 -c 4
+//第十八条
+./mydocker network create --driver bridge --subnet 10.10.10.1/24 testbr
+./mydocker network list
+ip link show type bridge
+ ./mydocker network remove testbr
+ ip link show type bridge
+ ip r
+iptables -t nat -L POSTROUTING
+ ./mydocker network list
+./mydocker run -it -net testbr busybox sh
+ydocker/overlay2/4040058849/merged","time":"2024-06-14T18:45:08+08:00"}
+{"level":"info","msg":"Find path /bin/sh","time":"2024-06-14T18:45:08+08:00"}
+/ # ip a
